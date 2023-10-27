@@ -24,10 +24,10 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### H5电影APP项目介绍
-UI组件库： better-scroll，Swiper，Vant UI
-js库：dayjs，axios，await-to-js
-样式：less
-vue全家桶：vuex, vue-router
+#### UI组件库： better-scroll，Swiper，Vant UI
+#### js库：dayjs，axios，await-to-js
+#### 样式：less
+#### vue全家桶：vuex, vue-router
     "@better-scroll/mouse-wheel": "^2.5.1",
     "@better-scroll/scroll-bar": "^2.5.1",
     "await-to-js": "^3.0.0",
