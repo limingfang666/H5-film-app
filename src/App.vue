@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 内容区域 -->
+    <router-view></router-view>
+    <!-- tabBar区域 -->
+    <tabbar v-if="showTabbar"></tabbar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Tabbar from "./components/Tabbar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Tabbar
+  },
+computed:{
+  // 计算属性设置页面是否显示tabBar
+  showTabbar(){
+    let showTabarArr = ["detail"];
+    return !showTabarArr.includes(this.$route.name);
   }
-}
+},
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less">
+@import url("../public/iconfont/iconfont.css");
+body,
+html,
+ul,
+li,h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+html, body{
+  height: 100%;
 }
 </style>
